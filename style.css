@@ -1,0 +1,264 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  width: 350px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+form input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #4f46e5;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+#message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: crimson;
+}
+/* Admin Card Layout */
+.admin-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+}
+
+.admin-card h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.admin-card section {
+  margin-bottom: 30px;
+}
+
+.admin-card form input,
+.admin-card form select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.admin-card form button {
+  width: 100%;
+  padding: 12px;
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admin-card form button:hover {
+  background: #3730a3;
+}
+
+/* Price Update Section */
+#itemsList {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+#itemsList div {
+  margin-bottom: 20px;
+  padding: 12px;
+  background-color: #f8f9ff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#itemsList input {
+  width: 65%;
+  margin-right: 8px;
+  padding: 8px;
+}
+.section {
+  margin-bottom: 20px;
+}
+
+.section-toggle {
+  cursor: pointer;
+  background: #eef;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: background 0.3s ease;
+}
+
+.section-toggle:hover {
+  background: #dde;
+}
+
+.section-content {
+  display: none; /* This ensures sections are hidden by default */
+  padding: 10px 0;
+  border-left: 3px solid #4f46e5;
+  padding-left: 15px;
+}
+#searchItem {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.suggestions-box {
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.suggestion {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestion:hover {
+  background-color: #f0f0ff;
+}
+
+.update-box {
+  background: #f8f9ff;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 10px;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 500px;
+}
+
+.update-box input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.update-box button {
+  background: #4f46e5;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  margin-top: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.update-box button:hover {
+  background-color: #3730a3;
+}
+
+.suggestion-box {
+  margin-top: 8px;
+  max-width: 500px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.suggestion {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion:hover {
+  background-color: #f0f0ff;
+}
+
+/*index.html*/
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.item-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.item-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}

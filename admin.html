@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="admin-card">
+    <h2>📦 Admin Dashboard</h2>
+    <p id="adminMessage" style="color: green; text-align: center; margin-bottom: 15px;"></p>
+
+    <div class="section">
+  <h3 class="section-toggle" onclick="toggleSection('categorySection')">➕ Add Category</h3>
+  <div id="categorySection" class="section-content">
+    <form id="categoryForm">
+      <input type="text" id="categoryName" placeholder="Category Name" required>
+      <button type="submit">Add Category</button>
+    </form>
+  </div>
+</div>
+
+<div class="section">
+  <h3 class="section-toggle" onclick="toggleSection('itemSection')">📦 Add Item</h3>
+  <div id="itemSection" class="section-content">
+    <form id="itemForm">
+      <input type="text" id="itemName" placeholder="Item Name" required>
+      <input type="text" id="itemDescription" placeholder="Description">
+      <input type="number" id="itemPrice" placeholder="Price" required>
+      <select id="itemCategory" required></select>
+      <label for="itemImage">Item Image (Optional):</label>
+      <input type="file" id="itemImage" accept="image/*">
+      <button type="submit">Add Item</button>
+    </form>
+  </div>
+</div>
+
+<div class="section">
+  <h3 class="section-toggle" onclick="toggleSection('priceSection')">💰 Update Price</h3>
+    <div id="priceSection" class="section-content">
+      <h3>💰 Update Price</h3>
+      <input type="text" id="searchItem" placeholder="Search Item..." oninput="filterItems()" />
+      <div id="suggestions" class="suggestion-box"></div>
+
+      <div id="selectedItemBox" style="display: none;">
+        <div class="update-box">
+          <p><strong id="selectedItemName"></strong> (<span id="selectedItemCategory"></span>)</p>
+          <p>Current Price: ₹<span id="selectedItemPrice"></span></p>
+          <input type="number" id="newPriceInput" placeholder="Enter new price" />
+          <button onclick="updateSelectedPrice()">Update</button>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
