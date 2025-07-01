@@ -1,7 +1,7 @@
 // script.js
 
 const API_BASE_URL = "https://shop-inventory-backend-l06v.onrender.com";
-console.log("Script loaded!");
+console.log("Script loaded! https://shop-inventory-backend-l06v.onrender.com ");
 
 function toggleSection(id) {
   const el = document.getElementById(id);
